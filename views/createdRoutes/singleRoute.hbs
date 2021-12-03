@@ -1,8 +1,104 @@
 {{#with data}}
 <div class="bg-white">
   <section aria-labelledby="features-heading" class="relative">
-    <div class="aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:w-1/2 lg:h-full lg:pr-4 xl:pr-16">
-      <img src="{{this.getSingleRoute.imgUrl}}" alt="{{this.getSingleRoute.title}}" class="h-full w-full object-center object-cover lg:h-full lg:w-full">
+    <div class="aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:w-1/2 lg:h-full lg:pr-4 xl:pr-16" style="padding-top: 10%;">
+     
+    
+    <!-----GALERIA------>
+
+    <div class="row">
+            <div class="row">
+                
+                <div class="col-lg-12 col-md-12 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl1}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl1}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl2}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl2}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl3}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl3}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl4}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl4}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+    
+    
+    
+                <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl5}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl5}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                       data-image="{{this.getSingleRoute.imgUrl6}}"
+                       data-target="#image-gallery">
+                        <img class="img-thumbnail"
+                             src="{{this.getSingleRoute.imgUrl6}}"
+                             alt="Another alt text">
+                    </a>
+                </div>
+             </div>
+    
+    
+            <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="image-gallery-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                            </button>
+    
+                            <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+<!----END GALERÍA---->
+
+
     </div>
 
     <div class="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:pb-32 sm:px-6 lg:max-w-7xl lg:pt-32 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
@@ -35,8 +131,9 @@
       <a href="/createdRoutes/{{this.getSingleRoute._id}}/editMyRoute" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-500">Editar la ruta</a>
          <br>
          <br>
-      <form method="POST" action="/createdRoutes/{{this.getSingleRoute._id}}/delete">
-        <button class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-500"">Eliminar esta ruta</button>
+      <form method="POST" action="/createdRoutes/{{this.getSingleRoute._id}}/deleteRoute">
+        <button class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"">Eliminar esta ruta</button>
+
       </form>
       {{/if}}
      

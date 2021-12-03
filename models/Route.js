@@ -8,7 +8,12 @@ const routeSchema = mongoose.Schema({
     magicTown: String,
     hardness: Number,
     description: String,
-    imgUrl: String,
+    imgUrl1: String,
+    imgUrl2: String,
+    imgUrl3: String,
+    imgUrl4: String,
+    imgUrl5: String,
+    imgUrl6: String,
     postedBy: String
 },{
     timestamps:true

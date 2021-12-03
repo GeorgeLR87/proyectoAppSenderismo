@@ -112,10 +112,17 @@ exports.createUserRoute = async (req, res)=>{
     const magicTown = req.body.magicTown
     const hardness = req.body.hardness
     const description = req.body.description
-    const imgUrl = req.body.imgUrl
+    const imgUrl1 = req.body.imgUrl1
+	const imgUrl2 = req.body.imgUrl2
+	const imgUrl3 = req.body.imgUrl3
+	const imgUrl4 = req.body.imgUrl4
+	const imgUrl5 = req.body.imgUrl5
+	const imgUrl6 = req.body.imgUrl6
     const postedBy = req.session.currentUser.username
-    const idOwner = req.session.currentUser._id
-    const newRouteCreated = await Route.create({title, state, town, altitude, lodging, magicTown, hardness, description, imgUrl, postedBy, idOwner})
+    //const idOwner = req.session.currentUser._id
+     const newRouteCreated = await Route.create({title, state, town, altitude, lodging, magicTown, hardness, description, imgUrl1, imgUrl2, imgUrl3, imgUrl4, imgUrl5, imgUrl6, postedBy})
+    //console.log("nueva ruta en DB:", newRouteCreated)
+
 
     res.redirect('/createdRoutes/allRoutes')
 }

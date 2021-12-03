@@ -29,5 +29,5 @@ router.get("/:routeID/editMyRoute", routeGuard.usuarioLoggeado, usersController.
 router.post("/:routeID/editMyRoute", routeGuard.usuarioLoggeado, usersController.editUserRoute)
 
 //Delete my routes
-router.post("/:routeID/delete",  routeGuard.usuarioLoggeado, usersController.deleteUserRoute )
+router.post("/:routeID/deleteRoute",  routeGuard.usuarioLoggeado, usersController.deleteUserRoute )
 
